@@ -1,0 +1,247 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
+body {
+    padding-top: 80px;
+    background-color: #eee;
+    font-family: 'Open Sans', sans-serif!important;
+}
+
+.well{
+    background-color:#fff!important;
+    border-radius:0!important;
+    border:none!important;
+}
+
+.well.login-box {
+    padding-top: 40px;
+    width:300px;
+    margin:0 auto;
+    margin-bottom: 15px;
+}
+
+.well.login-box legend, .confirmation {
+  font-size:26px;
+  text-align:center;
+  font-weight:300;
+}
+
+.well.login-box label {
+  font-weight:300;
+  font-size:16px;
+  
+}
+
+.error_view_nation {
+  text-align: center !important;
+}
+
+.sidebar {
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding-top: 20px;
+  padding-right: 40px;
+}
+
+ul.nav.navbar-nav li a {
+  line-height: 22px !important;
+}
+
+.body_mover {
+	padding-top: 60px;
+}
+
+.brand {
+	font-size: 28px;
+	line-height: 50px;
+	text-decoration: none !important;
+	text-align: center;
+	width: 100%;
+}
+
+.brand_container {
+	border: 1px black solid;
+	-webkit-border-bottom-right-radius: 50px;
+	-webkit-border-bottom-left-radius: 50px;
+	-moz-border-radius-bottomright: 50px;
+	-moz-border-radius-bottomleft: 50px;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+
+.masthead_main_stream {
+	height: 450px;
+}
+
+.masthead_main_stream_container {
+	width: 640px !important;
+	height: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 !important;
+}
+
+.masthead_main_stream_info {
+	width: 200px !important;
+}
+
+.main_panel_holder {
+	width: 840px !important;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.masthead_info {
+	margin-top: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 640px;
+}
+
+.stream_username {
+	display: inline;
+}
+
+.stream_viewers {
+	display: inline;
+}
+
+.stream_background {
+	
+}
+
+.dropdown_login {
+	padding: 15px;
+}
+
+.main_panel {
+	height: 360px;
+}
+
+.stream_holder {
+	width:-moz-calc(100% - 250px);
+	width:-webkit-calc(100% - 250px);
+	width:-o-calc(100% - 250px);
+	width:calc(100% - 300px);
+	float: left;
+}
+
+.chat_holder {
+	width: 300px !important;
+	float: right !important;
+	position: fixed;
+	top: 50px;
+	right: 0;
+	border-left: 1px solid #cccccc;
+	background-color: #66a8cc;
+	background: rgba(102, 168, 204, .1);
+}
+
+.stream_holder, .chat_holder{
+	height:-moz-calc(100%);
+	height:-webkit-calc(100%);
+	height:-o-calc(100%);
+	height:calc(100%)
+}
+
+.stream_title {
+	margin-top: 0px !important;
+}
+
+.stream_description {
+	margin-bottom: 0px !important;
+}
+
+.stream_info {
+	padding-bottom: 53px;
+}
+
+.chat_header {
+	border-bottom: 1px solid #cccccc;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.chat_header > h5 {
+	padding-left: 15px;
+}
+
+.inline {
+	display: inline !important;
+}
+
+.stream_media {
+	width: 500px;
+}
+
+.chat {
+	position: relative;
+	height: 500px;
+	overflow: scroll;
+}
+
+.chat > p {
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px dashed black;
+}
+
+.chat_input {
+	position: fixed;
+	bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px solid grey;
+}
+
+.stream_info_viewers {
+	padding-top: 10px;
+}
+
+.chat_input_button {
+	height: 73px;
+	margin-top: 1px;
+}
+
+.chat_input_box {
+	width: 200px;
+	margin-right: 5px;
+}
+
+.menu_hover:hover, .navbar-header:hover {
+	background: rgba(255,255,255,0.2);
+}
+
+#video_player {
+	border: 1px solid white;
+}

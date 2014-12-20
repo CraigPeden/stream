@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load bootstrap3 %}
+
+{% block content %}
+
+<div class="container">
+	{% if user.is_anonymous %}
+	<div class="row">
+        <div class="col-md-12">
+            <div class="well login-box">
+	        	<form id="form" method="post" action="/register/">
+	        		<legend>Register</legend>
+
+		            {% csrf_token %}
+
+		            {% bootstrap_form form %}
+		            {% bootstrap_form_errors form %}
+
+		            <!-- Provide a button to click to submit the form. -->
+		            <input class="btn btn-primary btn-block" type="submit" value="Register" />
+	        	</form>
+	        </div>
+	    </div>
+	</div>
+	{% else %}
+	You're already signed in to an account! <a href="/">Click here to return to the home page,</a>
+	{% endif %}
+
+</div>
+
+{% endblock %}
