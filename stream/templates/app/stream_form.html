@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<form action="" method="post">
+	    	{% csrf_token %}
+			{% bootstrap_form form %}
+			{% bootstrap_form_errors form %}
+			<button type="submit" class="btn btn-primary">Update</button>
+	</div>
+</div>
+
+{% endblock %}

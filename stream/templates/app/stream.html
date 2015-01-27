@@ -20,14 +20,14 @@
 					</div>
 					<p class="stream_viewers inline pull-right stream_info_viewers"><i class="glyphicon glyphicon-user"></i>	47,352</p>
 				</div>
-				{% if steam_online %}
-					<img src="http://placehold.it/1920x1080">
-					<!--<video id="video_player" class="video-js vjs-default-skin" controls preload="auto" data-setup="{}" poster="http://video-js.zencoder.com/oceans-clip.png" autoplay>';
-						<source src="' . readlink($stream_user->username) . '" type="application/x-mpegURL" />';
-						<source src="http://192.168.88.234seq/videos/' . strtolower($stream_user->username) . '/index.m3u8" type="application/x-mpegURL" />';
-					</video>';-->
+				{% if broadcaster.stream_online %}
+				<div class="video-container">
+					<video id="stream_video" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup='{}' preload="auto" width="100%">
+						<source src="{% static "hobbit.mkv" %}" type='video/mp4'>
+					</video>
+				</div>
 				{% else %}
-					<h1>Offline</h1>
+				<h1>Offline</h1>
 				{% endif %}
 			</div>
 		</div>
@@ -37,7 +37,7 @@
 			</div>
 			<div class="container-fluid">
 				<div class="chat">
-					<h3>IRC's fucked</h3>
+					<h3>IRC's buggered</h3>
 				</div>
 				<div class="chat_input">
 					<textarea class="form-control chat_input_box inline pull-left" rows="3"></textarea>
@@ -50,29 +50,28 @@
 	</div>
 </div>
 
-<style>
-body {
-	padding-top: 65px;
-}
-</style>
-
 <script type="text/javascript">
-	videojs.options.flash.swf = 'video-js.swf';
-  // Once the video is ready
-  _V_("video_player").ready(function(){
-    var myPlayer = this;    // Store the video object
-    var aspectRatio = 9/16; // Make up an aspect ratio
+	     // Once the video is ready
+    _V_("#stream_video").ready(function(){
+      
+      // Store the video object
+      var myPlayer = this; 
+      // Make up an aspect ratio
+      var aspectRatio = 9/16; 
 
-    function resizeVideoJS(){
-      // Get the parent element's actual width
-      var width = document.getElementById(myPlayer.U).parentElement.offsetWidth;
-      // Set width to fill parent element, Set height
-      myPlayer.width(width-30).height( width * aspectRatio );
-    }
+      function resizeVideoJS(){
+        var width = document.getElementById('stream_video').parentElement.offsetWidth;
+        myPlayer.width(width).height( width * aspectRatio );
 
-    resizeVideoJS(); // Initialize the function
-    window.onresize = resizeVideoJS; // Call the function on resize
-  });
+      }
+      
+       // Initialize resizeVideoJS()
+      resizeVideoJS();
+      // Then on resize call resizeVideoJS()
+      window.onresize = resizeVideoJS; 
+
+    });
+
 </script>
 
 {% endblock %}

@@ -8,11 +8,12 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     
-    # Authentication
+    # Users
     
     url(r'^login/$', 'django.contrib.auth.views.login'),
     url(r'^logout/$', 'django.contrib.auth.views.logout'),
     url(r'^register/$', views.registerView.as_view()),
+    url(r'^stream/$', views.profile.as_view()),
     
     # App
     
